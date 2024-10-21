@@ -14,8 +14,10 @@ int *func(int size)
 
 int main()
 {
-    int *ptr;
+    int a = 10;
+    int *ptr= &a;
     int sz = 5;
+    cout<<ptr<<endl;
     ptr = func(sz);
     for (int i = 0; i < sz; i++)
     {
