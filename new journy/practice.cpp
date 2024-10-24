@@ -133,9 +133,10 @@ int main()
     int unique = uniquue(arr, 7);
     cout << unique;
     cout << endl;
-    vector<int> v = {0, 0, 0, 0, 0, 0};
+    vector<int> v = {0, 0, 0, 4, 0, 0};
     for (int ele : v)
         cout << ele << " ";
-
+    cout << endl;
+    cout << v.at(3);
     return 0;
 }

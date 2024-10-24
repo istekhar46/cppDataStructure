@@ -64,22 +64,22 @@ int main()
     string s = "abc";
     string s1 = "cba";
     vector<char> v(3, 'a');
-    for(auto i : v){
-        cout << i << " ";
-    }
-    cout << endl;
+    // for(auto i : v){
+    //     cout << i << " ";
+    // }
+    // cout << endl;
 
-    cout<< s.length()<< endl;
-    int arr[] = {3, 4, 2, 2, 5};
-    int n = sizeof(arr) / sizeof(int);
+    // cout<< s.length()<< endl;
+    // int arr[] = {3, 4, 2, 2, 5};
+    // int n = sizeof(arr) / sizeof(int);
 
-    findMissingWithDuplicte(arr, n);
+    // findMissingWithDuplicte(arr, n);
     
    
 
-    // vector<int> nums{1, 2, 3, 4, 5, 6, 7};
-    // int k = 3;
-    // rotate(nums, k);
+    vector<int> nums{1, 2, 3, 4, 5, 6, 7};
+    int k = 3;
+    rotate(nums, k);
 
     //    int arr[] = {-59,-4,34,-3,5,32,-2,2};
     //     int n = sizeof(arr) / sizeof(arr[0]);
