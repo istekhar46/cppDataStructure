@@ -1,8 +1,6 @@
- // for (int i = 0; i < 3; i++)
-    // {
-    //     for (int j = 0; j < 3; j++)
-    //     {
-    //         cout << arr[i][j] << " ";
-    //     }
-    //     cout << endl;
-    // }
+while (n > 0)
+    {
+        int remainder = n % 2;
+        n = n / 2;
+        arr.push_back(remainder);
+    }
