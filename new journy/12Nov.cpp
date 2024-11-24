@@ -16,7 +16,25 @@ void decimalToBinary(int n)
 
 int main()
 {
-    int n = 13;
+    int n = 97;
+    int k = 9;
+    float l = 1.9; 
+    double res = n/((double)k);
+    cout<<res<<" : res "<<l<<endl;
+    char a = n;
+    cout<<a<<endl;
+    int decimal = 0;
+    int j = 0;
+    while (n > 0)
+    {
+        int bit = n % 10;
+        decimal = bit * pow(2, j) + decimal;
+        n = n / 10;
+        j++;
+    }
+
+    cout << "decimal : " << decimal;
+
     vector<int> arr;
     int binay = 0;
     int i = 0;
@@ -41,7 +59,8 @@ int main()
     }
     cout << endl;
     cout << binay << endl;
-    int m = 1 * pow(10,3) + 101;
+    int m = 1 * pow(10, 3) + 101;
     cout << m;
+
     return 0;
 }
