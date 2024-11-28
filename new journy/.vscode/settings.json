@@ -10,6 +10,11 @@
         "*.css": "tailwindcss",
         "iostream": "cpp",
         "xstring": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "exception": "cpp",
+        "memory": "cpp",
+        "tuple": "cpp",
+        "utility": "cpp",
+        "vector": "cpp"
     }
 }
