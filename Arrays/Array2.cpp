@@ -7,7 +7,7 @@ int main()
   int A[10] = {4, 4, 6, 5, 3, 4};
   int n = 10;
 
-  // Adding Elements on the last index .....
+  // Adding Elements on a specific index .....
 
   A[6] = 154;
 
