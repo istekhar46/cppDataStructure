@@ -32,17 +32,21 @@ void print2d(vector<vector<int>> &mat)
         {
             cout << x << " ";
         }
-        cout<<endl;
+        cout << endl;
     }
 }
 
-vector<int> targetIndex (vector<int>&arr, int target){
+vector<int> targetIndex(vector<int> &arr, int target)
+{
 
     vector<int> result;
-    for (int i = 0; i < arr.size(); i++){
-        for(int j = i+1; j < arr.size(); j++){
+    for (int i = 0; i < arr.size(); i++)
+    {
+        for (int j = i + 1; j < arr.size(); j++)
+        {
             int sum = arr[i] + arr[j];
-            if(sum == target){
+            if (sum == target)
+            {
                 result.push_back(i);
                 result.push_back(j);
                 return result;
@@ -51,20 +55,75 @@ vector<int> targetIndex (vector<int>&arr, int target){
     }
 
     return result;
-
 }
 
+void printRowWise(vector<vector<int>> &arr)
+{
+    for (int i = 0; i < arr.size(); i++)
+    {
+        for (int j = 0; j < arr[i].size(); j++)
+        {
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
+};
+
+void printColWise(vector<vector<int>> &arr)
+{
+    // Find the maximum number of columns in any row
+    int maxCols = 0;
+    for (auto &row : arr)
+    {
+        if (row.size() > maxCols)
+            maxCols = row.size();
+    }
+
+    // Iterate columns first
+    for (int j = 0; j < maxCols; j++)
+    {
+        for (int i = 0; i < arr.size(); i++)
+        {
+            if (j < arr[i].size())
+            { // check if this row has column j
+                cout << arr[i][j] << " ";
+            }
+            else
+            {
+                cout << "  "; // optional: keep spacing for missing elements
+            }
+        }
+        cout << endl;
+    }
+}
+
+void simpleColPrint(vector<vector<int>> &arr)
+{
+    for (int i = 0; i < arr[0].size(); i++)
+    { // iterate columns first
+        for (int j = 0; j < arr.size(); j++)
+        { // then iterate rows
+            cout << arr[j][i] << " ";
+        }
+        cout << endl;
+    }
+}
 int main()
 {
 
     vector<int> arr(5, 0);
-    vector<int> test = {1,2,5,7};
-    int target = 12;
+    vector<vector<int>> test = {{1, 2, 5}, {7, 8, 9},{2,2,3}};
 
-    vector<int> print = targetIndex(test, target);
-    for(auto x : print){
-        cout<< x;
-    }
+    printRowWise(test);
+    cout << endl;
+    // printColWise(test);
+    simpleColPrint(test);
+    // int target = 12;
+
+    // vector<int> print = targetIndex(test, target);
+    // for(auto x : print){
+    //     cout<< x;
+    // }
 
     // for (auto x : arr)
     // {
