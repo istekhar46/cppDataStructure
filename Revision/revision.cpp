@@ -108,13 +108,32 @@ void simpleColPrint(vector<vector<int>> &arr)
         cout << endl;
     }
 }
+vector<vector<int>> transpose(const vector<vector<int>> &arr)
+{
+    int rows = arr.size();
+    int cols = arr[0].size();
+
+    vector<vector<int>> result(cols, vector<int>(rows));
+
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < cols; j++)
+        {
+            result[j][i] = arr[i][j];
+        }
+    }
+    return result;
+}
+
 int main()
 {
 
     vector<int> arr(5, 0);
-    vector<vector<int>> test = {{1, 2, 5}, {7, 8, 9},{2,2,3}};
+    vector<vector<int>> test = {{1, 2, 5}, {7, 8, 9}, {2, 2, 3}};
 
     printRowWise(test);
+    cout << endl;
+    transpose(test);
     cout << endl;
     // printColWise(test);
     simpleColPrint(test);
